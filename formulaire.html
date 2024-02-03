@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>formulaire</title>
+    <link rel="stylesheet" href="formulaire.css">
+    
+    <style>
+        body {
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        body.light-mode {
+            background: white;
+            color: black;
+        }
+
+        body.dark-mode {
+            background: black;
+            color: white;
+        }
+
+        
+    </style>
+</head>
+
+<body>
+
+    <h1>mon formulaire :D </h1>
+
+    <div class="menu-container">
+        <div class="burger-menu" onclick="toggleMenu()">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+
+    </div>
+    <ul class="nav-menu">
+        <li><a href="https://fr.wikipedia.org/wiki/Charles_Leclerc_(pilote_automobile)">clique ici</a></li>
+        <li><a href="https://www.youtube.com/watch?v=_SI3tCkhuiQ">puis ici</a></li>
+        <li><a href="https://www.youtube.com/watch?v=UQ0tHHqy8Kw">et enfin là</a></li>
+    </ul>
+    </div>
+
+
+    <form action=""id="myForm">
+        <label for="nom">nom</label>
+        <input type="text" id="nom" name="nom" required>
+        <label for="motdepasse">mot de passe</label>
+        <input type="password" id="motdepasse" name="motdepasse" required>
+        <label for="email">email</label>
+        <input type="email" id="email" name="email" required>
+
+        <fieldset>
+            <legend>est-ce que vous aimez ce que je fais?</legend>
+            <label for="o">oui grave!</label>
+            <input type="radio" name="avis" id="o" value="o">
+            <label for="e">c'est vraiment extraordinaire</label>
+            <input type="radio" name="avis" id="e" value="e">
+            <label for="q">qui pourrait ne pas aimer?</label>
+            <input type="radio" name="avis" id="q" value="q">
+        </fieldset>
+
+        <fieldset>
+            <legend>quel est mon surnom préféré?</legend>
+            <select name="surnom" id="Liste">
+                <option value="surnom1">Beccachou</option>
+                <option value="surnom2">Becca</option>
+                <option value="surnom3">Beccapable</option>
+                <option value="surnom4">Rebecool</option>
+            </select>
+        </fieldset>
+
+        <fieldset>
+            <legend>autre</legend>
+            <label for="commentaire">un petit commentaire?</label>
+            <textarea name="commentaire" id="commentaire" cols="30" rows="10"></textarea>
+            <label for="couleur">couleur préférée</label>
+            <input type="color" id="couleur" name="couleur">
+        </fieldset>
+        <input type="submit" value="valider" id="button">
+        <input type="reset" value="supprimer">
+        
+    </form>
+
+    <button onclick="darkmode()">Dark Mode</button>
+
+
+    <script src="formulaire.js"></script>
+</body>
+
+</html>
